@@ -13,18 +13,17 @@
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
+            background: url('https://source.unsplash.com/1920x1080/?artificial-intelligence') center/cover fixed;
+            color: #fff;
             overflow: hidden;
         }
 
         header {
-            position: fixed;
-            width: 100%;
             background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8));
             color: #fff;
             padding: 20px;
             text-align: center;
             animation: fadeIn 1s ease-in-out;
-            z-index: 1;
         }
 
         h1 {
@@ -54,38 +53,23 @@
         }
 
         main {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start; /* Align to the left */
             width: 100%;
             height: 100vh;
-            position: relative;
-            z-index: 0;
-        }
-
-        #video-bg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            z-index: -1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         #upload-section {
-            text-align: left;
-            margin: 20px;
-            position: absolute;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
+            text-align: center;
+            max-width: 800px; /* Increased max-width for better placement of the video */
+            width: 100%;
+            position: relative;
         }
 
         #upload-container {
             border: 2px dashed #3498db;
-            padding: 30px;
+            padding: 30px; /* Slightly larger padding */
             text-align: center;
             background-color: rgba(255, 255, 255, 0.8);
             border-radius: 10px;
@@ -99,7 +83,7 @@
         #upload-label {
             cursor: pointer;
             display: inline-block;
-            padding: 20px;
+            padding: 20px; /* Slightly larger padding */
             background-color: #3498db;
             color: #fff;
             border-radius: 5px;
@@ -112,11 +96,11 @@
 
         #upload-progress {
             width: 100%;
-            margin-top: 20px;
+            margin-top: 20px; /* Slightly larger margin */
         }
 
         #upload-instructions {
-            margin-top: 20px;
+            margin-top: 20px; /* Slightly larger margin */
             color: #777;
         }
 
@@ -147,7 +131,7 @@
 </head>
 <body>
     <header>
-        <h1>DeepSecure</h1>
+        <h1>Deepfake Detection</h1>
         <nav>
             <ul>
                 <li><a href="#">Home</a></li>
@@ -159,11 +143,6 @@
     </header>
 
     <main>
-        <video id="video-bg" autoplay muted loop>
-            <source src="C:\Users\gladw\Desktop\UI\video (1440p).mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-
         <section id="upload-section">
             <div id="upload-container">
                 <input type="file" id="file-input" accept=".mp4, .avi">
